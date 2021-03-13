@@ -47,6 +47,6 @@ public class Main {
             figures[j] = " ";
 
         }
-
+    while (true){}
     }
 }
