@@ -33,7 +33,14 @@ public class Main {
 
         for (int i = 0; i < names.length; i++) {
            int j = random.nextInt(11);
-           while (figures[j].equals(" ")){
+           if (i == 0 || i == 2){
+               continue;
+           }
+           while (figures[j].equals(" ") || j == 0 || j == 1){
+               j = random.nextInt(11);
+
+           }
+           if (i == 4 && j == 0 ){
                j = random.nextInt(11);
            }
            System.out.println(names[i] + ' ' + figures[j]);
