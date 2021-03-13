@@ -1,10 +1,14 @@
 package pasha.edu;
 
+import java.util.Random;
+
 public class Main {
 
     public static void main(String[] args) {
-	String[] names = new String[8];
-	names [0] = "Паша";
+
+        Random random = new Random();
+        String[] names = new String[8];
+        names [0] = "Паша";
 	names [1] = "Артем";
 	names [2] = "Деник";
 	names [3] = "Олег";
@@ -26,5 +30,10 @@ public class Main {
         figures [9] = "Циліндр";
         figures [10] = "Конус";
         figures [11] = "Піраміда";
+
+        for (int i = 0; i < names.length; i++) {
+           int figure = random.nextInt(11);
+            System.out.println(names[i]);
+        }
     }
 }
