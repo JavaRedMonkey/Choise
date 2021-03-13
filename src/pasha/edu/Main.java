@@ -32,8 +32,14 @@ public class Main {
         figures [11] = "Піраміда";
 
         for (int i = 0; i < names.length; i++) {
-           int figure = random.nextInt(11);
-            System.out.println(names[i]);
+           int j = random.nextInt(11);
+           while (figures[j].equals(" ")){
+               j = random.nextInt(11);
+           }
+           System.out.println(names[i] + ' ' + figures[j]);
+            figures[j] = " ";
+
         }
+
     }
 }
